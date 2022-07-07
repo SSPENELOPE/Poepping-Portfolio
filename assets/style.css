@@ -1,4 +1,4 @@
-/**global**/
+/** global **/
 * {
     margin: 0;
     padding: 0;
@@ -10,10 +10,93 @@ body {
 }
 
 
-/**Header/Navbar**/
+/** Header/Navba r**/
+.menu {
+ color: #fff;
+ font-size: 30px;
+ font-weight: 900;
+ text-decoration: none;
+ font-family: open;
+ padding-right: 2em;
+ margin: 3px;
+ position: relative;
+ display: inline-block;
+ transition: .2s;
+}
+
+.menu ul
+{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+}
+
+.menu ul li
+{
+  list-style: none;
+  padding: 4px;
+  position: relative;
+  transition: 0.5s;
+  display: block;
+  
+}
+
+.menu ul li a
+{
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  overflow: hidden;
+}
+
+.menu ul li ul
+{
+  display: none;
+  overflow: hidden;
+}
+
+.menu ul li:hover ul {
+  display: block;
+  position: absolute;
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px 2px;
+  box-shadow: 0px 20px 100px 0px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.menu ul li::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: -100%;
+  background-color: black;
+  left: -80%;
+  overflow: hidden;
+}
+
+.menu ul li::after {
+  content: '';
+  width: 80%;
+  height: .1rem;
+  left: 100%;
+  position: absolute;
+  background-color: red;
+  transition: .4s ease-in;
+  bottom: 0;
+}
+
+.menu ul li:hover::before {
+  left: 100%;
+}
+
+.menu ul li:hover::after {
+  left: 0;
+}
+
  header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
@@ -26,7 +109,7 @@ body {
 
    header h1 {
     margin-bottom: 5px;
-    margin-right: 1em;
+    margin-right: 3em;
     background-color: black;
     color: white;
     padding: 15px 2em 15px 2em;
@@ -35,12 +118,11 @@ body {
     line-height: 1.0;
   }
 
+
    nav {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
   }
-
 
    nav a {
     color: #fff;
@@ -65,10 +147,6 @@ body {
     left: -80%;
   }
 
-  nav a:hover::before {
-    left: 100%;
-  }
-
   nav a::after {
     content: '';
     width: 80%;
@@ -79,13 +157,17 @@ body {
     transition: .4s ease-in;
     bottom: 0;
   }
-  
+
+  nav a:hover::before {
+    left: 100%;
+  }
+
   nav a:hover::after {
     left: 0;
   }
 
 
-  /**Banner**/
+  /** Banner **/
   .banner {
     background: url("./images/1500x500-American-Flag-Twitter-Header0028.jpg");
     background-size: cover;
@@ -105,23 +187,21 @@ body {
 }
 
 
-/**About Me Section**/
+/** About Me Section **/
 
-#about-me {
+.about-me {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.about-me > h1 {
+  color: #fff;
   margin: 25px 0;
   padding: 10px 0;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.about-me > h1 {
-  color: #fff;
-  text-align: center;
   font-size: 60px;
+  text-align: center;
   line-height: 1.1;
 }
 
@@ -152,11 +232,35 @@ body {
   font-size: 22px;
 }
 
-.myphoto {
-background: url(./images/image0.jpeg);
-background-size: cover;
-background-position: center;
-max-height: 600px;
-max-width: 600px;
-
+/* Media querries */
+@media screen and (max-width: 860px) {
+  nav, 
+  nav a,
+  header {
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+  }  
+  header {
+    max-height: 275px;
+  }
+  header h1 {
+    font-size: 25px;
+  }
 }
+
+
+@media screen and (max-width: 480px) {
+   nav,
+   nav a,
+   header, 
+   header h1,
+   .biography-text {
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+   }
+  
+}
+
