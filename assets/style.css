@@ -66,16 +66,6 @@ body {
   overflow: hidden;
 }
 
-.menu ul li::before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: -100%;
-  background-color: black;
-  left: -80%;
-  overflow: hidden;
-}
-
 .menu ul li::after {
   content: '';
   width: 80%;
@@ -85,14 +75,6 @@ body {
   background-color: red;
   transition: .4s ease-in;
   bottom: 0;
-}
-
-.menu ul li:hover::before {
-  left: 100%;
-}
-
-.menu ul li:hover::after {
-  left: 0;
 }
 
  header {
@@ -167,6 +149,7 @@ body {
   }
 
 
+
   /** Banner **/
   .banner {
     background: url("./images/1500x500-American-Flag-Twitter-Header0028.jpg");
@@ -187,26 +170,67 @@ body {
 }
 
 
-/** About Me Section **/
+/** Portfolio Contents **/
 
-.about-me {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
+main {
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
 }
-.about-me > h1 {
-  color: #fff;
+
+.wrapper {
   margin: 25px 0;
   padding: 10px 0;
   display: flex;
-  font-size: 60px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
   text-align: center;
-  line-height: 1.1;
 }
 
-.about-me > p {
-  margin-top: 1opx;
+.about-header {
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+}
+
+.biography {
+  border: 3px solid white;
+  max-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  text-decoration: none;
+  box-shadow: 5px 7px 9px gray;
+}
+
+.biography-text {
+  color: #fff;
+  font-size: 22px;
+}
+
+.project-wrapper {
+  margin: 25px 0;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-wrapper div {
+  flex: 0 0 100%;
+}
+
+.project-wrapper h2 {
+  color: #fff;
+  font-size: 45px;
+  border-left: 5px solid white;
+  flex: 0 0 15%;
+  line-height: 1.5;
+  
 }
 
 .container {
@@ -215,22 +239,26 @@ body {
   justify-content: center;
 }
 
-
-.biography {
-  border: 3px solid white;
-  max-height: 600px;
+.work-box {
   display: flex;
-  flex-basis: calc(80% - 1em);
-  align-items: flex-end;
-  padding: 5px;
-  margin-bottom: 1em;
+  align-items: flex-start;
   text-decoration: none;
+  color: #fff;
+  border: 3px solid red;
+  min-width: 200px;
+  min-height: 250px;
+  flex-basis: calc(50% - 1em);
+  padding: 25px;
+  margin: .5em;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
-.biography-text {
-  color: #fff;
-  font-size: 22px;
+.work-box:first-child {
+  flex-basis: 100%;
+  min-height: 450px;
 }
+
 
 /* Media querries */
 @media screen and (max-width: 860px) {
@@ -248,6 +276,11 @@ body {
   header h1 {
     font-size: 25px;
   }
+
+  .biography,
+  .biography-text {
+    font-size: 15px;
+  }
 }
 
 
@@ -255,12 +288,17 @@ body {
    nav,
    nav a,
    header, 
-   header h1,
-   .biography-text {
+   header h1 {
     flex-direction: column;
     align-items: center;
     font-size: 15px;
    }
+
+   .biography,
+   .biography-text {
+    font-size: 10px;
+   }
+   
   
 }
 
