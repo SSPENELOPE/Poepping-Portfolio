@@ -205,6 +205,8 @@ main {
 .contact a {
   color: var(--light);
   text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
   font-size: 30px;
   font-weight: 900;
   font-family: open;
@@ -314,6 +316,25 @@ main {
 
 
 /* Media querries */
+
+/** Tablets **/
+@media screen and (max-width: 892px) {
+  .wrapper,
+  .container {
+    flex-direction: column;
+  }
+  .wrapper h2 {
+    border-bottom: 5px solid var(--light);
+    border-right: none;
+  }
+  .work-box,
+  .work-box:first-child {
+    max-width: 500px;
+    min-height: 250px;
+  }
+}
+
+/** Tablets **/
 @media screen and (max-width: 860px) {
   nav, 
   nav a,
@@ -333,10 +354,24 @@ main {
   .biography,
   .biography-text {
     font-size: 15px;
+    text-align: left;
+  }
+
+  .contact a {
+    font-size: 15px;
+  }
+
+  .contact a {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container img {
+    margin: 20px;
   }
 }
 
-
+/** Small Devices **/
 @media screen and (max-width: 480px) {
    nav,
    nav a,
@@ -347,11 +382,36 @@ main {
     font-size: 15px;
    }
 
+   .container img {
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+   }
+
    .biography,
    .biography-text {
     font-size: 10px;
+    text-align: left;
    }
    
+   main {
+    width: 90vw;
+   }
+
+   .wrapper h2 {
+    font-size: 25px;
+   }
+
+   .contact a {
+    font-size: 10px;
+   }
+
+   .work-box,
+   .work-box:first-child {
+     min-width: 230px;
+     min-height: 120px;
+   }
+ }
   
-}
+
 
