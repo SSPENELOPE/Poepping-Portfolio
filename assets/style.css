@@ -219,7 +219,7 @@ main {
 
 .contact a::after {
   content: '';
-  width: 100%;
+  width: 85%;
   height: .1rem;
   left: 100%;
   position: absolute;
