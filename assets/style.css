@@ -125,6 +125,7 @@ body {
     position: relative;
     display: inline-block;
     transition: .2s;
+    z-index: 1;
   }
 
   nav a::before {
@@ -174,6 +175,14 @@ body {
     color: var(--light);
     margin: 23px;
     padding: 10px;
+}
+
+section img {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
