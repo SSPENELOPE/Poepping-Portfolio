@@ -343,12 +343,18 @@ main {
     align-items: center;
     font-size: 20px;
     text-align: center;
-  }  
+  }
+
   header {
     max-height: 275px;
   }
+
   header h1 {
     font-size: 25px;
+  }
+
+  .banner-text {
+    font-size: 10px;
   }
 
   .biography,
