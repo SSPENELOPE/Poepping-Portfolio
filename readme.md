@@ -8,6 +8,7 @@
 
 # Usage
 - Use this portfolio at your discretion. Feel free to use the code or just play around with the features and see if you like it.
+- You can view and use the page at (https://sspenelope.github.io/tyler-portfolio-v2/)
 
 # Credits
 - Myself for the creation of the portfolio
