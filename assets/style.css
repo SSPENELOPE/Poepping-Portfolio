@@ -237,14 +237,15 @@ main {
 
 .tribute {
   background: url(./images/tributepage.png);
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   opacity: 0.4;
 }
 
 .tribute:hover {
-  content: '';
   background: url(./images/tributepage.png);
   background-size: cover;
+  background-position: center;
   transition: all 0.7s ease-in-out;
   box-shadow: 5px 5px 5px var(--light);
   opacity: 1.0;
@@ -254,12 +255,13 @@ main {
   background: url(./images/surveypage.png);
   opacity: 0.4;
   background-size: cover;
+  background-position: center;
 }
 
 .survey:hover {
-  content: '';
   background: url(./images/surveypage.png);
   background-size: cover;
+  background-position: center;
   transition: all 0.7s ease-in-out;
   box-shadow: 5px 5px 5px var(--light);
   opacity: 1.0;
@@ -332,6 +334,7 @@ main {
     max-width: 500px;
     min-height: 250px;
   }
+
 }
 
 /** Tablets **/
