@@ -17,7 +17,7 @@
 
 ![alt text](assets/images/webpage-screenshot.png)
 
-- You can view and use the page at (https://sspenelope.github.io/tyler-portfolio-v2/)
+- You can view and use the page at (https://sspenelope.github.io/Poepping-Portfolio/)
 
 # Credits
 - Myself for the creation of the portfolio
