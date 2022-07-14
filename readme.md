@@ -3,6 +3,8 @@
 # Description
 - This is my most up to date portfolio. It is a work in progress so expect items to be missing or in "coming soon" status. As i continue to progress through school and make more projects I will update my portfolio so it includes all my most recent work.
 
+- Motivation to build this portfolio was for use of future employers and a requirement to obtain my fullstack developer certification.
+
 # Installation 
 - No installation required
 
