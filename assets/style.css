@@ -10,6 +10,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: black;
     background-size: cover;
@@ -83,7 +84,7 @@ body {
 
 
   /** Banner **/
-  .banner {
+.banner {
     background: url("./images/1500x500-American-Flag-Twitter-Header0028.jpg");
     background-size: cover;
     width: 100vw;
