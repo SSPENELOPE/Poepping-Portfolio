@@ -265,6 +265,22 @@ main {
   opacity: 1.0;
 }
 
+.beard {
+  background: url(./images/beard.png);
+  opacity: 0.4;
+  background-size: cover;
+  background-position: center;
+}
+
+.beard:hover {
+  background: url(./images/beard.png);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.7s ease-in-out;
+  box-shadow: 5px 5px 5px var(--light);
+  opacity: 1.0;
+}
+
 .coming-soon {
   background: url("./images/coming-soon.webp");
   background-position: center;
